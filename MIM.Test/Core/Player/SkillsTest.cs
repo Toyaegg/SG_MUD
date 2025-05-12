@@ -26,7 +26,7 @@ namespace MIM.Test.Core.Player
 
             var hasSkill = Skill.CheckPlayerHasSkill(player, magicMissle.Name);
 
-            Assert.IsTrue(hasSkill);
+            Assert.That(hasSkill, Is.True, "hasSkill");
 
         }
 
@@ -36,7 +36,7 @@ namespace MIM.Test.Core.Player
 
             var skillWorked = MIMWebClient.Core.Helpers.SkillSuccess(50);
 
-            Assert.IsTrue(skillWorked);
+            Assert.That(skillWorked, Is.True, "skillWorked");
 
         }
 
@@ -52,7 +52,7 @@ namespace MIM.Test.Core.Player
 
             var hasSkill = Skill.CheckPlayerHasSkill(player, magicMissle.Name);
 
-            Assert.IsFalse(hasSkill);
+            Assert.That(hasSkill, Is.False, "dont hasSkill");
 
         }
 
